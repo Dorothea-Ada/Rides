@@ -11,7 +11,7 @@ import Combine
 protocol VehicleListViewModelable: ObservableObject {
     var state: VehicleListViewModel.State { get }
     
-    func getListOfRandomVehicles(size: Int, sortedBy sorterOption: ListSorterOption)
+    func getListOfRandomVehicles(sizeString: String, sortedBy sorterOption: ListSorterOption)
 }
 
 final class VehicleListViewModel: VehicleListViewModelable {
@@ -31,12 +31,12 @@ final class VehicleListViewModel: VehicleListViewModelable {
         self.vehicleFetcher = vehicleFetcher
     }
     
-    func getListOfRandomVehicles(size: Int, sortedBy sorterOption: ListSorterOption) {
+    func getListOfRandomVehicles(sizeString: String, sortedBy sorterOption: ListSorterOption) {
         state.errorMessage = nil
         state.listOfVehicles = []
         state.isLoadingVehicles = true
         
-        vehicleFetcher.getListOfRandomVehicles(size: size)
+        vehicleFetcher.getListOfRandomVehicles(size: Int(sizeString) ?? .max)
             .receive(on: RunLoop.main)
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
@@ -44,7 +44,6 @@ final class VehicleListViewModel: VehicleListViewModelable {
                     self?.state.isLoadingVehicles = false
                 }
             } receiveValue: { [weak self] listOfVehicles in
-                print(listOfVehicles)
                 self?.state.listOfVehicles = ListSorter.sortList(listOfVehicles, by: sorterOption)
                 self?.state.isLoadingVehicles = false
             }

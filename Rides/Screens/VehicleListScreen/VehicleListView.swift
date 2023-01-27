@@ -12,8 +12,6 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
     
     @ObservedObject var viewModel: ViewModel
     
-    @State private var tappedToRetry: Bool = false
-    
     @State private var sizeString: String = "10"
     @State private var sorterOption: ListSorterOption = .vin
     
@@ -24,8 +22,7 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
                     VehicleList(listOfVehicles: viewModel.state.listOfVehicles)
                 } header: {
                     VehicleListSearch(sizeString: $sizeString, sorterOption: $sorterOption, onGetListOfRandomVehicles: {
-                        guard let size = try? Int(sizeString) else { return }
-                        viewModel.getListOfRandomVehicles(size: size, sortedBy: sorterOption)
+                        viewModel.getListOfRandomVehicles(sizeString: sizeString, sortedBy: sorterOption)
                     })
                 }
             }
@@ -37,25 +34,16 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
                 if viewModel.state.isLoadingVehicles {
                     ScaledProgressView()
                 } else if viewModel.state.errorMessage != nil {
-                    errorView
+                    ErrorView(
+                        viewModel: viewModel.state,
+                        tappedToRetry: {
+                            viewModel.getListOfRandomVehicles(sizeString: sizeString, sortedBy: sorterOption)
+                        }
+                    )
                 }
             }
         }
         .accentColor(.white)
-    }
-    
-    private var errorView: some View {
-        ErrorView(
-            tappedToRetry: $tappedToRetry,
-            viewModel: viewModel.state
-        )
-        .onReceive(Just(tappedToRetry)) { value in
-            if value {
-                guard let size = try? Int(sizeString) else { return }
-                viewModel.getListOfRandomVehicles(size: size, sortedBy: sorterOption)
-                tappedToRetry = false
-            }
-        }
     }
 }
 

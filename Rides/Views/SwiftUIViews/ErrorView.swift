@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ErrorView<ViewModel>: View where ViewModel: ErrorStatable {
 
-    @Binding var tappedToRetry: Bool
     var viewModel: ViewModel
+    var tappedToRetry: (() -> Void)
     
     var body: some View {
         VStack(spacing: 16) {
@@ -18,7 +18,7 @@ struct ErrorView<ViewModel>: View where ViewModel: ErrorStatable {
                 .font(.system(size: 80))
             Text(viewModel.errorMessage ?? "")
             Button {
-                tappedToRetry = true
+                tappedToRetry()
             } label: {
                 Text("Try again")
             }
