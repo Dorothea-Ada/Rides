@@ -9,20 +9,12 @@ import UIKit
 
 final class VehicleDetailViewController: UIViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    var viewModel: VehicleDetailViewModelable!
     
-    private var viewModel: VehicleDetailViewModelable!
-
-    init?(coder: NSCoder, viewModel: VehicleDetailViewModelable) {
-        self.viewModel = viewModel
-        super.init(coder: coder)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private var collectionView: UICollectionView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         setup()
     }
 }
@@ -30,6 +22,14 @@ final class VehicleDetailViewController: UIViewController {
 // MARK: Private Methods
 
 private extension VehicleDetailViewController {
+    var layout: UICollectionViewCompositionalLayout {
+        var config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        config.showsSeparators = false
+        config.backgroundColor = .black
+        
+        return UICollectionViewCompositionalLayout.list(using: config)
+    }
+    
     func setup() {
         setupUI()
         setupCollectionView()
@@ -40,6 +40,8 @@ private extension VehicleDetailViewController {
     }
     
     func setupCollectionView() {
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(DetailCell.self)
@@ -49,10 +51,7 @@ private extension VehicleDetailViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
         
-        var config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        config.showsSeparators = false
-        config.backgroundColor = .black
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: config)
+        view.addSubview(collectionView)
         
         collectionView.reloadData()
     }

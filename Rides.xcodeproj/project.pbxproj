@@ -29,7 +29,6 @@
 		BFDD8EA62983443F00BAA3AF /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EA52983443F00BAA3AF /* CustomFont.swift */; };
 		BFDD8EAC2984122800BAA3AF /* ListSorterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EAB2984122800BAA3AF /* ListSorterOption.swift */; };
 		BFDD8EAE2984158000BAA3AF /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */; };
-		BFDD8EB12984174900BAA3AF /* VehicleDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8EB02984174900BAA3AF /* VehicleDetailViewController.storyboard */; };
 		BFDD8EB32984175800BAA3AF /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */; };
 		BFDD8EB5298417B700BAA3AF /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */; };
 		BFDD8EB72984199900BAA3AF /* VehicleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */; };
@@ -92,7 +91,6 @@
 		BFDD8EA72983450D00BAA3AF /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
 		BFDD8EAB2984122800BAA3AF /* ListSorterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSorterOption.swift; sourceTree = "<group>"; };
 		BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
-		BFDD8EB02984174900BAA3AF /* VehicleDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VehicleDetailViewController.storyboard; sourceTree = "<group>"; };
 		BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
 		BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 		BFDD8EAF2984173700BAA3AF /* VehicleDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BFDD8EB02984174900BAA3AF /* VehicleDetailViewController.storyboard */,
 				BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */,
 				BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */,
 				BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */,
@@ -472,7 +469,6 @@
 			files = (
 				BFDD8E4A2983219800BAA3AF /* LaunchScreen.storyboard in Resources */,
 				BFDD8E472983219800BAA3AF /* Assets.xcassets in Resources */,
-				BFDD8EB12984174900BAA3AF /* VehicleDetailViewController.storyboard in Resources */,
 				BFDD8EC82984292300BAA3AF /* DetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
