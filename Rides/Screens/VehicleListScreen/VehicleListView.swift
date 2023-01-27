@@ -28,8 +28,8 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
             }
             .listStyle(.plain)
             .navigationTitle("List of Vehicles")
+            .navigationBarTitleTextColor(CustomColor.red)
             .navigationBarTitleDisplayMode(.large)
-            .preferredColorScheme(.dark)
             .overlay(alignment: .center) {
                 if viewModel.state.isLoadingVehicles {
                     ScaledProgressView()
@@ -44,6 +44,7 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
             }
         }
         .accentColor(.white)
+        .preferredColorScheme(.dark)
     }
 }
 
