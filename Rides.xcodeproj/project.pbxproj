@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2C50DE29844BF40054E480 /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50DD29844BF40054E480 /* VehicleList.swift */; };
+		BF2C50E229844C2F0054E480 /* VehicleListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50E129844C2F0054E480 /* VehicleListRowView.swift */; };
+		BF2C50E529844CDB0054E480 /* VehicleListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50E429844CDB0054E480 /* VehicleListRowViewModel.swift */; };
+		BF2C50E829844DDB0054E480 /* VehicleListSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50E729844DDB0054E480 /* VehicleListSearch.swift */; };
 		BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */; };
 		BFDD8E402983219600BAA3AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */; };
 		BFDD8E472983219800BAA3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8E462983219800BAA3AF /* Assets.xcassets */; };
@@ -25,7 +29,6 @@
 		BFDD8E91298339A400BAA3AF /* VehicleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E90298339A400BAA3AF /* VehicleFetcher.swift */; };
 		BFDD8E95298339DB00BAA3AF /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E94298339DB00BAA3AF /* Vehicle.swift */; };
 		BFDD8E9729833BB800BAA3AF /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E9629833BB800BAA3AF /* VehicleListViewModel.swift */; };
-		BFDD8E9F298340C700BAA3AF /* VehicleListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E9E298340C700BAA3AF /* VehicleListRowView.swift */; };
 		BFDD8EA62983443F00BAA3AF /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EA52983443F00BAA3AF /* CustomFont.swift */; };
 		BFDD8EAC2984122800BAA3AF /* ListSorterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EAB2984122800BAA3AF /* ListSorterOption.swift */; };
 		BFDD8EAE2984158000BAA3AF /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */; };
@@ -62,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF2C50DD29844BF40054E480 /* VehicleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
+		BF2C50E129844C2F0054E480 /* VehicleListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListRowView.swift; sourceTree = "<group>"; };
+		BF2C50E429844CDB0054E480 /* VehicleListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListRowViewModel.swift; sourceTree = "<group>"; };
+		BF2C50E729844DDB0054E480 /* VehicleListSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListSearch.swift; sourceTree = "<group>"; };
 		BFDD8E3A2983219600BAA3AF /* Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +91,6 @@
 		BFDD8E90298339A400BAA3AF /* VehicleFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleFetcher.swift; sourceTree = "<group>"; };
 		BFDD8E94298339DB00BAA3AF /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		BFDD8E9629833BB800BAA3AF /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
-		BFDD8E9E298340C700BAA3AF /* VehicleListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListRowView.swift; sourceTree = "<group>"; };
 		BFDD8EA12983439500BAA3AF /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		BFDD8EA22983439B00BAA3AF /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		BFDD8EA52983443F00BAA3AF /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
@@ -131,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2C50E329844CCC0054E480 /* VehicleListRow */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C50E129844C2F0054E480 /* VehicleListRowView.swift */,
+				BF2C50E429844CDB0054E480 /* VehicleListRowViewModel.swift */,
+			);
+			path = VehicleListRow;
+			sourceTree = "<group>";
+		};
 		BFDD8E312983219600BAA3AF = {
 			isa = PBXGroup;
 			children = (
@@ -356,9 +371,11 @@
 		BFDD8ECC29842FCA00BAA3AF /* SwiftUIViews */ = {
 			isa = PBXGroup;
 			children = (
-				BFDD8E9E298340C700BAA3AF /* VehicleListRowView.swift */,
+				BF2C50E329844CCC0054E480 /* VehicleListRow */,
+				BF2C50DD29844BF40054E480 /* VehicleList.swift */,
 				BFDD8ECF2984378200BAA3AF /* ErrorView.swift */,
 				BFDD8ED329843D6A00BAA3AF /* ScaledProgressView.swift */,
+				BF2C50E729844DDB0054E480 /* VehicleListSearch.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -498,6 +515,7 @@
 				BFDD8E89298327C200BAA3AF /* API.swift in Sources */,
 				BFDD8EC72984292300BAA3AF /* DetailCell.swift in Sources */,
 				BFDD8E8B298327D600BAA3AF /* VehicleAPI.swift in Sources */,
+				BF2C50E829844DDB0054E480 /* VehicleListSearch.swift in Sources */,
 				BFDD8ED2298437B500BAA3AF /* ErrorStatable.swift in Sources */,
 				BFDD8E95298339DB00BAA3AF /* Vehicle.swift in Sources */,
 				BFDD8EAC2984122800BAA3AF /* ListSorterOption.swift in Sources */,
@@ -512,6 +530,7 @@
 				BFDD8E8E2983368000BAA3AF /* Constants.swift in Sources */,
 				BFDD8EC1298422BC00BAA3AF /* DetailCellViewModel.swift in Sources */,
 				BFDD8E7D298325E800BAA3AF /* VehicleListView.swift in Sources */,
+				BF2C50DE29844BF40054E480 /* VehicleList.swift in Sources */,
 				BFDD8E91298339A400BAA3AF /* VehicleFetcher.swift in Sources */,
 				BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */,
 				BFDD8E9729833BB800BAA3AF /* VehicleListViewModel.swift in Sources */,
@@ -520,8 +539,9 @@
 				BFDD8EA62983443F00BAA3AF /* CustomFont.swift in Sources */,
 				BFDD8ECE2984340800BAA3AF /* ListSorter.swift in Sources */,
 				BFDD8ED429843D6A00BAA3AF /* ScaledProgressView.swift in Sources */,
-				BFDD8E9F298340C700BAA3AF /* VehicleListRowView.swift in Sources */,
 				BFDD8EB5298417B700BAA3AF /* VehicleDetailViewModel.swift in Sources */,
+				BF2C50E529844CDB0054E480 /* VehicleListRowViewModel.swift in Sources */,
+				BF2C50E229844C2F0054E480 /* VehicleListRowView.swift in Sources */,
 				BFDD8E402983219600BAA3AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
     @ObservedObject var viewModel: ViewModel
     
     @State private var tappedToRetry: Bool = false
+    
     @State private var sizeString: String = "10"
     @State private var sorterOption: ListSorterOption = .vin
     
@@ -20,9 +21,12 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
         NavigationView {
             List {
                 Section {
-                    listOfVehicles
+                    VehicleList(listOfVehicles: viewModel.state.listOfVehicles)
                 } header: {
-                    listSectionHeader
+                    VehicleListSearch(sizeString: $sizeString, sorterOption: $sorterOption, onGetListOfRandomVehicles: {
+                        guard let size = try? Int(sizeString) else { return }
+                        viewModel.getListOfRandomVehicles(size: size, sortedBy: sorterOption)
+                    })
                 }
             }
             .listStyle(.plain)
@@ -38,52 +42,6 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
             }
         }
         .accentColor(.white)
-    }
-    
-    private var listSectionHeader: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Number of vehicles:")
-                TextField("", text: $sizeString)
-                    .frame(height: 40)
-                    .textFieldStyle(MyTextFieldStyle())
-                    .onReceive(Just(sizeString)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.sizeString = filtered
-                        }
-                    }
-                
-                Button {
-                    guard let size = try? Int(sizeString) else { return }
-                    viewModel.getListOfRandomVehicles(size: size, sortedBy: sorterOption)
-                } label: {
-                    Image(systemName: "magnifyingglass.circle")
-                }
-            }
-            HStack {
-                Text("Sorted by:")
-                Picker(selection: $sorterOption) {
-                    ForEach(ListSorterOption.allCases) { sorterOption in
-                        Text(sorterOption.title).tag(sorterOption)
-                    }
-                } label: {
-                    EmptyView()
-                }
-                .pickerStyle(.menu)
-            }
-        }
-    }
-    
-    private var listOfVehicles: some View {
-        ForEach(viewModel.state.listOfVehicles) { vehicle in
-            NavigationLink {
-                VehicleDetailView(vehicle: vehicle)
-                    .navigationTitle(vehicle.makeAndModel)
-            } label: {
-                VehicleListRowView(vehicle: vehicle)
-            }
-        }
     }
     
     private var errorView: some View {
