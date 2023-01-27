@@ -21,9 +21,13 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
                 Section {
                     VehicleList(listOfVehicles: viewModel.state.listOfVehicles)
                 } header: {
-                    VehicleListSearch(sizeString: $sizeString, sorterOption: $sorterOption, onGetListOfRandomVehicles: {
-                        viewModel.getListOfRandomVehicles(sizeString: sizeString, sortedBy: sorterOption)
-                    })
+                    VehicleListSearch(
+                        sizeString: $sizeString,
+                        sorterOption: $sorterOption,
+                        onGetListOfRandomVehicles: {
+                            viewModel.getListOfRandomVehicles(sizeString: sizeString, sortedBy: sorterOption)
+                        }
+                    )
                 }
             }
             .listStyle(.plain)

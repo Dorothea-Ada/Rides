@@ -10,6 +10,8 @@ import Combine
 
 struct VehicleListSearch: View {
     
+    @State var sizeStringError: String?
+    
     @Binding var sizeString: String
     @Binding var sorterOption: ListSorterOption
     
@@ -22,11 +24,8 @@ struct VehicleListSearch: View {
                 TextField("", text: $sizeString)
                     .frame(height: 40)
                     .textFieldStyle(MyTextFieldStyle())
-                    .onReceive(Just(sizeString)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.sizeString = filtered
-                        }
+                    .onChange(of: sizeString) { _ in
+                        sizeStringError = SizeStringValidator.validateSizeString(sizeString)
                     }
                 
                 Button {
@@ -34,6 +33,13 @@ struct VehicleListSearch: View {
                 } label: {
                     Image(systemName: "magnifyingglass.circle")
                 }
+                .disabled(sizeStringError != nil)
+            }
+            if let sizeStringError {
+                Text(sizeStringError)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: false)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
             }
             HStack {
                 Text("Sorted by:")

@@ -14,6 +14,8 @@
 		BF2C50EE298455930054E480 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50ED298455930054E480 /* View+.swift */; };
 		BF2C50F229845C0A0054E480 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50F129845C0A0054E480 /* Font+.swift */; };
 		BF2C50F429845C7C0054E480 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50F329845C7C0054E480 /* Color+.swift */; };
+		BF2C50F629845F910054E480 /* SizeStringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50F529845F910054E480 /* SizeStringValidator.swift */; };
+		BF2C50FB29846AFB0054E480 /* SizeStringValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50FA29846AFB0054E480 /* SizeStringValidatorTests.swift */; };
 		BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */; };
 		BFDD8E402983219600BAA3AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */; };
 		BFDD8E472983219800BAA3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8E462983219800BAA3AF /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		BF2C50ED298455930054E480 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		BF2C50F129845C0A0054E480 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		BF2C50F329845C7C0054E480 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		BF2C50F529845F910054E480 /* SizeStringValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStringValidator.swift; sourceTree = "<group>"; };
+		BF2C50FA29846AFB0054E480 /* SizeStringValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStringValidatorTests.swift; sourceTree = "<group>"; };
 		BFDD8E3A2983219600BAA3AF /* Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				BFDD8E542983219800BAA3AF /* RidesTests.swift */,
+				BF2C50FA29846AFB0054E480 /* SizeStringValidatorTests.swift */,
 			);
 			path = RidesTests;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				BFDD8E8D2983368000BAA3AF /* Constants.swift */,
 				BFDD8ECA29842D4900BAA3AF /* CarInfo.swift */,
 				BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */,
+				BF2C50F529845F910054E480 /* SizeStringValidator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				BFDD8E7D298325E800BAA3AF /* VehicleListView.swift in Sources */,
 				BF2C50DE29844BF40054E480 /* VehicleList.swift in Sources */,
 				BF2C50F429845C7C0054E480 /* Color+.swift in Sources */,
+				BF2C50F629845F910054E480 /* SizeStringValidator.swift in Sources */,
 				BFDD8E91298339A400BAA3AF /* VehicleFetcher.swift in Sources */,
 				BF2C50EE298455930054E480 /* View+.swift in Sources */,
 				BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */,
@@ -550,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2C50FB29846AFB0054E480 /* SizeStringValidatorTests.swift in Sources */,
 				BFDD8E552983219800BAA3AF /* RidesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
