@@ -36,7 +36,7 @@ final class VehicleListViewModel: VehicleListViewModelable {
         state.listOfVehicles = []
         state.isLoadingVehicles = true
         
-        vehicleFetcher.getListOfRandomVehicles(size: Int(sizeString) ?? .max)
+        vehicleFetcher.getListOfRandomVehicles(size: Int(sizeString) ?? 100)
             .receive(on: RunLoop.main)
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {

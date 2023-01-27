@@ -17,29 +17,33 @@ struct VehicleListSearch: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .bottom) {
                 Text("Number of vehicles:")
+                    .font(.regular18)
+                    .foregroundColor(.customGrayDark)
                 TextField("", text: $sizeString)
-                    .frame(height: 40)
                     .textFieldStyle(MyTextFieldStyle())
-                    .onReceive(Just(sizeString)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.sizeString = filtered
-                        }
-                    }
                 
                 Button {
                     onGetListOfRandomVehicles()
                 } label: {
-                    Image(systemName: "magnifyingglass.circle")
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(
+                            width: Constants.Design.textFieldHeight,
+                            height: Constants.Design.textFieldHeight
+                        )
+                        .foregroundColor(.customRed)
                 }
             }
             HStack {
                 Text("Sorted by:")
+                    .font(.regular18)
+                    .foregroundColor(.customGrayDark)
                 Picker(selection: $sorterOption) {
                     ForEach(ListSorterOption.allCases) { sorterOption in
-                        Text(sorterOption.title).tag(sorterOption)
+                        Text(sorterOption.title)
+                            .tag(sorterOption)
                     }
                 } label: {
                     EmptyView()
@@ -47,6 +51,7 @@ struct VehicleListSearch: View {
                 .pickerStyle(.menu)
             }
         }
+        .accentColor(.white)
     }
 }
 

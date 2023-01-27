@@ -21,14 +21,18 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
                 Section {
                     VehicleList(listOfVehicles: viewModel.state.listOfVehicles)
                 } header: {
-                    VehicleListSearch(sizeString: $sizeString, sorterOption: $sorterOption, onGetListOfRandomVehicles: {
-                        viewModel.getListOfRandomVehicles(sizeString: sizeString, sortedBy: sorterOption)
-                    })
+                    VehicleListSearch(
+                        sizeString: $sizeString,
+                        sorterOption: $sorterOption,
+                        onGetListOfRandomVehicles: {
+                            viewModel.getListOfRandomVehicles(sizeString: sizeString, sortedBy: sorterOption)
+                        }
+                    )
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("List of Vehicles")
-            .navigationBarTitleTextColor(.customRed)
+            .navigationTitle("Vehicles")
+            .setCustomNavigationBarTitleStyle()
             .navigationBarTitleDisplayMode(.large)
             .overlay(alignment: .center) {
                 if viewModel.state.isLoadingVehicles {
@@ -43,7 +47,7 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
                 }
             }
         }
-        .accentColor(.white)
+        .accentColor(.customGrayDark)
         .preferredColorScheme(.dark)
     }
 }

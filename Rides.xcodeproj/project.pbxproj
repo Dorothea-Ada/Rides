@@ -14,6 +14,10 @@
 		BF2C50EE298455930054E480 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50ED298455930054E480 /* View+.swift */; };
 		BF2C50F229845C0A0054E480 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50F129845C0A0054E480 /* Font+.swift */; };
 		BF2C50F429845C7C0054E480 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50F329845C7C0054E480 /* Color+.swift */; };
+		BF2C50FD2984755A0054E480 /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50FC2984755A0054E480 /* FontName.swift */; };
+		BF2C50FF2984756B0054E480 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50FE2984756B0054E480 /* UIFont+.swift */; };
+		BF2C51032984777E0054E480 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8EA22983439B00BAA3AF /* Oswald-Regular.ttf */; };
+		BF2C51052984777E0054E480 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8EA12983439500BAA3AF /* Oswald-Bold.ttf */; };
 		BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */; };
 		BFDD8E402983219600BAA3AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */; };
 		BFDD8E472983219800BAA3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8E462983219800BAA3AF /* Assets.xcassets */; };
@@ -74,6 +78,8 @@
 		BF2C50ED298455930054E480 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		BF2C50F129845C0A0054E480 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		BF2C50F329845C7C0054E480 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		BF2C50FC2984755A0054E480 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
+		BF2C50FE2984756B0054E480 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		BFDD8E3A2983219600BAA3AF /* Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +104,6 @@
 		BFDD8E9629833BB800BAA3AF /* VehicleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListViewModel.swift; sourceTree = "<group>"; };
 		BFDD8EA12983439500BAA3AF /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		BFDD8EA22983439B00BAA3AF /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
-		BFDD8EA72983450D00BAA3AF /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
 		BFDD8EAB2984122800BAA3AF /* ListSorterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSorterOption.swift; sourceTree = "<group>"; };
 		BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 		BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
@@ -311,9 +316,9 @@
 		BFDD8EA02983438200BAA3AF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BF2C50FC2984755A0054E480 /* FontName.swift */,
 				BFDD8EA12983439500BAA3AF /* Oswald-Bold.ttf */,
 				BFDD8EA22983439B00BAA3AF /* Oswald-Regular.ttf */,
-				BFDD8EA72983450D00BAA3AF /* Oswald-ExtraLight.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				BF2C50ED298455930054E480 /* View+.swift */,
 				BF2C50F129845C0A0054E480 /* Font+.swift */,
 				BF2C50F329845C7C0054E480 /* Color+.swift */,
+				BF2C50FE2984756B0054E480 /* UIFont+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +491,8 @@
 				BFDD8E4A2983219800BAA3AF /* LaunchScreen.storyboard in Resources */,
 				BFDD8E472983219800BAA3AF /* Assets.xcassets in Resources */,
 				BFDD8EC82984292300BAA3AF /* DetailCell.xib in Resources */,
+				BF2C51032984777E0054E480 /* Oswald-Regular.ttf in Resources */,
+				BF2C51052984777E0054E480 /* Oswald-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,8 +542,10 @@
 				BFDD8E91298339A400BAA3AF /* VehicleFetcher.swift in Sources */,
 				BF2C50EE298455930054E480 /* View+.swift in Sources */,
 				BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */,
+				BF2C50FD2984755A0054E480 /* FontName.swift in Sources */,
 				BFDD8E9729833BB800BAA3AF /* VehicleListViewModel.swift in Sources */,
 				BFDD8E842983279200BAA3AF /* Request.swift in Sources */,
+				BF2C50FF2984756B0054E480 /* UIFont+.swift in Sources */,
 				BFDD8EAE2984158000BAA3AF /* CustomTextFieldStyle.swift in Sources */,
 				BFDD8ECE2984340800BAA3AF /* ListSorter.swift in Sources */,
 				BFDD8ED429843D6A00BAA3AF /* ScaledProgressView.swift in Sources */,

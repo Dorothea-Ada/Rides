@@ -12,7 +12,7 @@ struct VehicleListRowViewModel {
 
 extension VehicleListRowViewModel {
     static let mock = VehicleListRowViewModel(
-        vin: Vehicle.mockVehicle1.vin,
-        makeAndModel: Vehicle.mockVehicle2.makeAndModel
+        vin: Vehicle.mock1.vin,
+        makeAndModel: Vehicle.mock1.makeAndModel
     )
 }

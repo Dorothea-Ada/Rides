@@ -16,11 +16,14 @@ struct VehicleListRowView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(viewModel.makeAndModel)
                     .font(.bold32)
-                HStack(alignment: .bottom) {
-                    Text("VIN:")
-                        .font(.extraLight14)
-                    Text(viewModel.vin)
+                    .foregroundColor(.customRed)
+                HStack(alignment: .lastTextBaseline) {
+                    Text("\(CarInfo.vin.rawValue):")
                         .font(.regular18)
+                        .foregroundColor(.customGrayDark)
+                    Text(viewModel.vin)
+                        .font(.regular24)
+                        .foregroundColor(.customGrayLight)
                 }
             }
 
