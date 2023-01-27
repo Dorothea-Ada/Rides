@@ -6,7 +6,6 @@
 	<array>
 		<string>Oswald-Bold.ttf</string>
 		<string>Oswald-Regular.ttf</string>
-		<string>Oswald-ExtraLight.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

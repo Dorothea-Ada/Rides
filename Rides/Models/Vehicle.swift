@@ -26,14 +26,14 @@ struct Vehicle: Decodable, Identifiable {
 }
 
 extension Vehicle {
-    static let mockVehicle1 = Vehicle(
+    static let mock1 = Vehicle(
         vin: "5TGM6KFPP90N06915",
         makeAndModel: "Chevy Malibu",
         color: "Red",
         carType: "Minivan"
     )
     
-    static let mockVehicle2 = Vehicle(
+    static let mock2 = Vehicle(
         vin: "VZR06XCPJPP636399",
         makeAndModel: "Dodge Ram",
         color: "Black",

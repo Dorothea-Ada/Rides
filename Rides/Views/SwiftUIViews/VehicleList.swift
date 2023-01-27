@@ -18,7 +18,10 @@ struct VehicleList: View {
                     .navigationTitle(vehicle.makeAndModel)
             } label: {
                 VehicleListRowView(
-                    viewModel: VehicleListRowViewModel(vin: vehicle.vin, makeAndModel: vehicle.makeAndModel)
+                    viewModel: VehicleListRowViewModel(
+                        vin: vehicle.vin,
+                        makeAndModel: vehicle.makeAndModel
+                    )
                 )
             }
         }
@@ -27,6 +30,6 @@ struct VehicleList: View {
 
 struct VehicleList_Previews: PreviewProvider {
     static var previews: some View {
-        VehicleList(listOfVehicles: [Vehicle.mockVehicle1, Vehicle.mockVehicle2])
+        VehicleList(listOfVehicles: [Vehicle.mock1, Vehicle.mock2])
     }
 }

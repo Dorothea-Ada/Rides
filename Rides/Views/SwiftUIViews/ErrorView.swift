@@ -14,14 +14,31 @@ struct ErrorView<ViewModel>: View where ViewModel: ErrorStatable {
     
     var body: some View {
         VStack(spacing: 16) {
-            Text("🛞")
+            Text("🔥")
                 .font(.system(size: 80))
             Text(viewModel.errorMessage ?? "")
+                .multilineTextAlignment(.center)
+                .font(.regular18)
+                .foregroundColor(.customGrayDark)
             Button {
                 tappedToRetry()
             } label: {
                 Text("Try again")
+                    .font(.bold24)
+                    .foregroundColor(.customGrayLight)
             }
         }
+        .padding(.all)
+    }
+}
+
+struct ErrorView_Previews: PreviewProvider {
+    static var previews: some View {
+        ErrorView(
+            viewModel: VehicleListViewModel.State(
+                errorMessage: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            ),
+            tappedToRetry: {}
+        )
     }
 }

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct MyTextFieldStyle: TextFieldStyle {
+    
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
-//        .padding(30)
-            .frame(height: 40)
-        .background(
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .stroke(Color.red, lineWidth: 3)
-        )
+            .padding()
+            .frame(height: Constants.Design.textFieldHeight)
+            .background(
+                RoundedRectangle(
+                    cornerRadius: Constants.Design.textFieldHeight / 2,
+                    style: .continuous
+                )
+                .stroke(Color.customGrayLight, lineWidth: 2)
+            )
     }
 }

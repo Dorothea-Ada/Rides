@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import UIKit
 
 extension View {
-    func navigationBarTitleTextColor(_ color: Color) -> some View {
-        let uiColor = UIColor(color)
-        
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: uiColor]
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: uiColor]
+    func setCustomNavigationBarTitleStyle() -> some View {
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: UIFont.bold24,
+            .foregroundColor: Color.customRed.uiColor
+        ]
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font: UIFont.bold48,
+            .foregroundColor: Color.customRed.uiColor
+        ]
         
         return self
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class DetailCell: UICollectionViewCell {
 
@@ -34,6 +35,12 @@ extension DetailCell: Configurable {
 
 private extension DetailCell {
     func setupUI() {
-        backgroundColor = .blue
+        backgroundColor = Color.customGrayDarkest.uiColor
+        
+        titleLabel.textColor = .black
+        titleLabel.font = UIFont.regular18
+        
+        valueLabel.textColor = Color.customGrayLight.uiColor
+        valueLabel.font = UIFont.regular24
     }
 }

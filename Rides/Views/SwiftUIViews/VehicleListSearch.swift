@@ -19,10 +19,11 @@ struct VehicleListSearch: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .bottom) {
                 Text("Number of vehicles:")
+                    .font(.regular18)
+                    .foregroundColor(.customGrayDark)
                 TextField("", text: $sizeString)
-                    .frame(height: 40)
                     .textFieldStyle(MyTextFieldStyle())
                     .onChange(of: sizeString) { _ in
                         sizeStringError = SizeStringValidator.validateSizeString(sizeString)
@@ -31,21 +32,33 @@ struct VehicleListSearch: View {
                 Button {
                     onGetListOfRandomVehicles()
                 } label: {
-                    Image(systemName: "magnifyingglass.circle")
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(
+                            width: Constants.Design.textFieldHeight,
+                            height: Constants.Design.textFieldHeight
+                        )
+                        .foregroundColor(sizeStringError == nil ? .customRed : .customGrayDarkest)
                 }
                 .disabled(sizeStringError != nil)
             }
             if let sizeStringError {
                 Text(sizeStringError)
-                    .lineLimit(2)
-                    .fixedSize(horizontal: false, vertical: false)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.9)
                     .frame(maxWidth: .infinity, alignment: .trailing)
+                    .multilineTextAlignment(.trailing)
+                    .font(.regular18)
+                    .foregroundColor(.customRed)
             }
             HStack {
                 Text("Sorted by:")
+                    .font(.regular18)
+                    .foregroundColor(.customGrayDark)
                 Picker(selection: $sorterOption) {
                     ForEach(ListSorterOption.allCases) { sorterOption in
-                        Text(sorterOption.title).tag(sorterOption)
+                        Text(sorterOption.title)
+                            .tag(sorterOption)
                     }
                 } label: {
                     EmptyView()
@@ -53,6 +66,7 @@ struct VehicleListSearch: View {
                 .pickerStyle(.menu)
             }
         }
+        .accentColor(.white)
     }
 }
 
