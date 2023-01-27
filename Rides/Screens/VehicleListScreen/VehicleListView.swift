@@ -28,7 +28,7 @@ struct VehicleListView<ViewModel>: View where ViewModel: VehicleListViewModelabl
             }
             .listStyle(.plain)
             .navigationTitle("List of Vehicles")
-            .navigationBarTitleTextColor(CustomColor.red)
+            .navigationBarTitleTextColor(.customRed)
             .navigationBarTitleDisplayMode(.large)
             .overlay(alignment: .center) {
                 if viewModel.state.isLoadingVehicles {

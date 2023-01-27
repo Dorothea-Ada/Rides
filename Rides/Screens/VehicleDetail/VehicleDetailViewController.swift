@@ -9,9 +9,18 @@ import UIKit
 
 final class VehicleDetailViewController: UIViewController {
     
-    var viewModel: VehicleDetailViewModelable!
+    var viewModel: VehicleDetailViewModelable
     
     private var collectionView: UICollectionView!
+    
+    init(viewModel: VehicleDetailViewModelable) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

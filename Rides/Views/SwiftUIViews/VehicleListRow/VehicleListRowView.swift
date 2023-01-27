@@ -15,12 +15,12 @@ struct VehicleListRowView: View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading, spacing: 8) {
                 Text(viewModel.makeAndModel)
-                    .font(CustomFont.bold32)
+                    .font(.bold32)
                 HStack(alignment: .bottom) {
                     Text("VIN:")
-                        .font(CustomFont.extraLight14)
+                        .font(.extraLight14)
                     Text(viewModel.vin)
-                        .font(CustomFont.regular18)
+                        .font(.regular18)
                 }
             }
 

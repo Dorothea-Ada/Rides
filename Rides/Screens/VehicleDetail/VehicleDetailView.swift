@@ -12,9 +12,7 @@ struct VehicleDetailView: UIViewControllerRepresentable {
     let vehicle: Vehicle
     
     func makeUIViewController(context: Context) -> VehicleDetailViewController {
-        let vc = VehicleDetailViewController()
-        vc.viewModel = VehicleDetailViewModel(vehicle: vehicle)
-        return vc
+        VehicleDetailViewController(viewModel: VehicleDetailViewModel(vehicle: vehicle))
     }
     
     func updateUIViewController(_ uiViewController: VehicleDetailViewController, context: Context) {}

@@ -1,13 +1,13 @@
 //
-//  CustomFont.swift
+//  Font+.swift
 //  Rides
 //
-//  Created by Dorota Belanová on 2023-01-26.
+//  Created by Dorota Belanová on 2023-01-27.
 //
 
 import SwiftUI
 
-enum CustomFont {
+extension Font {
     
     static let bold32 = getFont(for: .bold, size: 32)
     
