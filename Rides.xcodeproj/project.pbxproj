@@ -214,7 +214,7 @@
 			children = (
 				BFDD8E6E298322A000BAA3AF /* LaunchScreen */,
 				BFDD8E702983236300BAA3AF /* VehicleListScreen */,
-				BFDD8EAF2984173700BAA3AF /* VehicleDetail */,
+				BFDD8EAF2984173700BAA3AF /* VehicleDetailScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -332,14 +332,14 @@
 			path = ListSorter;
 			sourceTree = "<group>";
 		};
-		BFDD8EAF2984173700BAA3AF /* VehicleDetail */ = {
+		BFDD8EAF2984173700BAA3AF /* VehicleDetailScreen */ = {
 			isa = PBXGroup;
 			children = (
 				BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */,
 				BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */,
 				BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */,
 			);
-			path = VehicleDetail;
+			path = VehicleDetailScreen;
 			sourceTree = "<group>";
 		};
 		BFDD8EB8298420A600BAA3AF /* CollectionViewCells */ = {
