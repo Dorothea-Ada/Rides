@@ -54,40 +54,43 @@ final class VehicleDetailPagingViewController: UIPageViewController,
         setupPageControl()
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-            
-        if let viewControllerIndex = self.pages.index(of: viewController) {
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        viewControllerBefore viewController: UIViewController
+    ) -> UIViewController? {
+        if let viewControllerIndex = pages.firstIndex(of: viewController) {
             if viewControllerIndex == 0 {
-                // wrap to last page in array
                 return self.pages.last
             } else {
-                // go to previous page in array
                 return self.pages[viewControllerIndex - 1]
             }
         }
         return nil
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-            
-        if let viewControllerIndex = self.pages.index(of: viewController) {
-            if viewControllerIndex < self.pages.count - 1 {
-                // go to next page in array
-                return self.pages[viewControllerIndex + 1]
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        viewControllerAfter viewController: UIViewController
+    ) -> UIViewController? {
+        if let viewControllerIndex = pages.firstIndex(of: viewController) {
+            if viewControllerIndex < pages.count - 1 {
+                return pages[viewControllerIndex + 1]
             } else {
-                // wrap to first page in array
-                return self.pages.first
+                return pages.first
             }
         }
         return nil
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-            
-    // set the pageControl.currentPage to the index of the current viewController in pages
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        didFinishAnimating finished: Bool,
+        previousViewControllers: [UIViewController],
+        transitionCompleted completed: Bool
+    ) {
         if let viewControllers = pageViewController.viewControllers {
-            if let viewControllerIndex = self.pages.index(of: viewControllers[0]) {
-                self.pageControl.currentPage = viewControllerIndex
+            if let viewControllerIndex = pages.firstIndex(of: viewControllers[0]) {
+                pageControl.currentPage = viewControllerIndex
             }
         }
     }
