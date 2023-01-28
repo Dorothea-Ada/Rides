@@ -7,17 +7,9 @@
 
 import Foundation
 
-protocol VehicleDetailViewModelable {
-    var dataSource: [VehicleDetailViewModel.DataSourceItem] { get }
-}
-
-final class VehicleDetailViewModel: VehicleDetailViewModelable {
+final class VehicleBasicInfoViewModel: VehicleDetailPageViewModelable {
     
-    enum DataSourceItem {
-        case detail(DetailCellViewModel)
-    }
-    
-    var dataSource: [VehicleDetailViewModel.DataSourceItem] {[
+    var dataSource: [VehicleDetailPageDataSourceItem] {[
         .detail(
             DetailCellViewModel(
                 carInfo: .vin,

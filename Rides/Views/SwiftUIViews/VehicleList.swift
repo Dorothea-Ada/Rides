@@ -14,7 +14,7 @@ struct VehicleList: View {
     var body: some View {
         ForEach(listOfVehicles) { vehicle in
             NavigationLink {
-                VehicleDetailView(vehicle: vehicle)
+                VehicleDetailPagingView(vehicle: vehicle)
                     .navigationTitle(vehicle.makeAndModel)
             } label: {
                 VehicleListRowView(

@@ -1,5 +1,5 @@
 //
-//  VehicleDetailViewController.swift
+//  VehicleDetailPageViewController.swift
 //  Rides
 //
 //  Created by Dorota Belanová on 2023-01-27.
@@ -7,13 +7,15 @@
 
 import UIKit
 
-final class VehicleDetailViewController: UIViewController {
+final class VehicleDetailPageViewController<ViewModel: VehicleDetailPageViewModelable>: UIViewController,
+                                                                                        UICollectionViewDelegate,
+                                                                                        UICollectionViewDataSource {
     
-    var viewModel: VehicleDetailViewModelable
+    var viewModel: VehicleDetailPageViewModelable
     
     private var collectionView: UICollectionView!
     
-    init(viewModel: VehicleDetailViewModelable) {
+    init(viewModel: VehicleDetailPageViewModelable) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -26,11 +28,27 @@ final class VehicleDetailViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    
+    // MARK: UICollectionViewDataSource
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.dataSource.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let viewModel = viewModel.dataSource[indexPath.row]
+
+        switch viewModel {
+        case .detail(let detailViewModel):
+            let cell: DetailCell = collectionView.dequeue(for: indexPath)
+            return cell.configured(for: detailViewModel)
+        }
+    }
 }
 
 // MARK: Private Methods
 
-private extension VehicleDetailViewController {
+private extension VehicleDetailPageViewController {
     var layout: UICollectionViewCompositionalLayout {
         var config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         config.showsSeparators = false
@@ -65,25 +83,3 @@ private extension VehicleDetailViewController {
         collectionView.reloadData()
     }
 }
-
-// MARK: UICollectionViewDataSource
-
-extension VehicleDetailViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.dataSource.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let viewModel = viewModel.dataSource[indexPath.row]
-        
-        switch viewModel {
-        case .detail(let detailViewModel):
-            let cell: DetailCell = collectionView.dequeue(for: indexPath)
-            return cell.configured(for: detailViewModel)
-        }
-    }
-}
-
-// MARK: UICollectionViewDelegate
-
-extension VehicleDetailViewController: UICollectionViewDelegate { }

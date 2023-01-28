@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF285FEE29848CB100363547 /* VehicleDetailPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF285FED29848CB100363547 /* VehicleDetailPagingView.swift */; };
+		BF285FF3298490CE00363547 /* VehicleEmissionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF285FF2298490CE00363547 /* VehicleEmissionsViewModel.swift */; };
+		BF285FF8298494AF00363547 /* VehicleDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF285FF7298494AF00363547 /* VehicleDetailPageViewController.swift */; };
+		BF285FFA298494FE00363547 /* VehicleDetailPageViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF285FF9298494FE00363547 /* VehicleDetailPageViewModelable.swift */; };
+		BF285FFD2984959700363547 /* VehicleDetailPageDataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF285FFC2984959700363547 /* VehicleDetailPageDataSourceItem.swift */; };
+		BF285FFF2984965000363547 /* EmissionsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF285FFE2984965000363547 /* EmissionsCalculator.swift */; };
+		BF28600329849D5700363547 /* EmissionsCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28600229849D5700363547 /* EmissionsCalculatorTests.swift */; };
 		BF2C50DE29844BF40054E480 /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50DD29844BF40054E480 /* VehicleList.swift */; };
 		BF2C50E229844C2F0054E480 /* VehicleListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50E129844C2F0054E480 /* VehicleListRowView.swift */; };
 		BF2C50E529844CDB0054E480 /* VehicleListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50E429844CDB0054E480 /* VehicleListRowViewModel.swift */; };
@@ -20,6 +27,8 @@
 		BF2C50FF2984756B0054E480 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C50FE2984756B0054E480 /* UIFont+.swift */; };
 		BF2C51032984777E0054E480 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8EA22983439B00BAA3AF /* Oswald-Regular.ttf */; };
 		BF2C51052984777E0054E480 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8EA12983439500BAA3AF /* Oswald-Bold.ttf */; };
+		BF2C5108298489540054E480 /* VehicleDetailPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C5107298489540054E480 /* VehicleDetailPagingViewController.swift */; };
+		BF2C510A298489F50054E480 /* VehicleDetailPagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C5109298489F50054E480 /* VehicleDetailPagingViewModel.swift */; };
 		BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */; };
 		BFDD8E402983219600BAA3AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */; };
 		BFDD8E472983219800BAA3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDD8E462983219800BAA3AF /* Assets.xcassets */; };
@@ -40,9 +49,7 @@
 		BFDD8E9729833BB800BAA3AF /* VehicleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8E9629833BB800BAA3AF /* VehicleListViewModel.swift */; };
 		BFDD8EAC2984122800BAA3AF /* ListSorterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EAB2984122800BAA3AF /* ListSorterOption.swift */; };
 		BFDD8EAE2984158000BAA3AF /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */; };
-		BFDD8EB32984175800BAA3AF /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */; };
-		BFDD8EB5298417B700BAA3AF /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */; };
-		BFDD8EB72984199900BAA3AF /* VehicleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */; };
+		BFDD8EB5298417B700BAA3AF /* VehicleBasicInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EB4298417B700BAA3AF /* VehicleBasicInfoViewModel.swift */; };
 		BFDD8EBF2984225A00BAA3AF /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EBE2984225A00BAA3AF /* UICollectionView+.swift */; };
 		BFDD8EC1298422BC00BAA3AF /* DetailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EC0298422BC00BAA3AF /* DetailCellViewModel.swift */; };
 		BFDD8EC3298422E900BAA3AF /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD8EC2298422E900BAA3AF /* Configurable.swift */; };
@@ -73,6 +80,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF285FED29848CB100363547 /* VehicleDetailPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPagingView.swift; sourceTree = "<group>"; };
+		BF285FF2298490CE00363547 /* VehicleEmissionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleEmissionsViewModel.swift; sourceTree = "<group>"; };
+		BF285FF7298494AF00363547 /* VehicleDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPageViewController.swift; sourceTree = "<group>"; };
+		BF285FF9298494FE00363547 /* VehicleDetailPageViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPageViewModelable.swift; sourceTree = "<group>"; };
+		BF285FFC2984959700363547 /* VehicleDetailPageDataSourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPageDataSourceItem.swift; sourceTree = "<group>"; };
+		BF285FFE2984965000363547 /* EmissionsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsCalculator.swift; sourceTree = "<group>"; };
+		BF28600229849D5700363547 /* EmissionsCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionsCalculatorTests.swift; sourceTree = "<group>"; };
 		BF2C50DD29844BF40054E480 /* VehicleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
 		BF2C50E129844C2F0054E480 /* VehicleListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListRowView.swift; sourceTree = "<group>"; };
 		BF2C50E429844CDB0054E480 /* VehicleListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListRowViewModel.swift; sourceTree = "<group>"; };
@@ -84,6 +98,8 @@
 		BF2C50FA29846AFB0054E480 /* SizeStringValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeStringValidatorTests.swift; sourceTree = "<group>"; };
 		BF2C50FC2984755A0054E480 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
 		BF2C50FE2984756B0054E480 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		BF2C5107298489540054E480 /* VehicleDetailPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPagingViewController.swift; sourceTree = "<group>"; };
+		BF2C5109298489F50054E480 /* VehicleDetailPagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailPagingViewModel.swift; sourceTree = "<group>"; };
 		BFDD8E3A2983219600BAA3AF /* Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDD8E3D2983219600BAA3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDD8E3F2983219600BAA3AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,9 +126,7 @@
 		BFDD8EA22983439B00BAA3AF /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		BFDD8EAB2984122800BAA3AF /* ListSorterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSorterOption.swift; sourceTree = "<group>"; };
 		BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
-		BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
-		BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
-		BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
+		BFDD8EB4298417B700BAA3AF /* VehicleBasicInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleBasicInfoViewModel.swift; sourceTree = "<group>"; };
 		BFDD8EBE2984225A00BAA3AF /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		BFDD8EC0298422BC00BAA3AF /* DetailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellViewModel.swift; sourceTree = "<group>"; };
 		BFDD8EC2298422E900BAA3AF /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -150,6 +164,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF285FF62984949C00363547 /* VehicleDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				BF285FFB2984957F00363547 /* ViewModels */,
+				BF285FF7298494AF00363547 /* VehicleDetailPageViewController.swift */,
+				BF285FFC2984959700363547 /* VehicleDetailPageDataSourceItem.swift */,
+			);
+			path = VehicleDetailPage;
+			sourceTree = "<group>";
+		};
+		BF285FFB2984957F00363547 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF285FF9298494FE00363547 /* VehicleDetailPageViewModelable.swift */,
+				BF285FF2298490CE00363547 /* VehicleEmissionsViewModel.swift */,
+				BFDD8EB4298417B700BAA3AF /* VehicleBasicInfoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BF2C50E329844CCC0054E480 /* VehicleListRow */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +191,16 @@
 				BF2C50E429844CDB0054E480 /* VehicleListRowViewModel.swift */,
 			);
 			path = VehicleListRow;
+			sourceTree = "<group>";
+		};
+		BF2C5106298489340054E480 /* VehicleDetailPagingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF2C5107298489540054E480 /* VehicleDetailPagingViewController.swift */,
+				BF2C5109298489F50054E480 /* VehicleDetailPagingViewModel.swift */,
+				BF285FED29848CB100363547 /* VehicleDetailPagingView.swift */,
+			);
+			path = VehicleDetailPagingScreen;
 			sourceTree = "<group>";
 		};
 		BFDD8E312983219600BAA3AF = {
@@ -201,6 +245,7 @@
 			children = (
 				BFDD8E542983219800BAA3AF /* RidesTests.swift */,
 				BF2C50FA29846AFB0054E480 /* SizeStringValidatorTests.swift */,
+				BF28600229849D5700363547 /* EmissionsCalculatorTests.swift */,
 			);
 			path = RidesTests;
 			sourceTree = "<group>";
@@ -219,7 +264,8 @@
 			children = (
 				BFDD8E6E298322A000BAA3AF /* LaunchScreen */,
 				BFDD8E702983236300BAA3AF /* VehicleListScreen */,
-				BFDD8EAF2984173700BAA3AF /* VehicleDetail */,
+				BF2C5106298489340054E480 /* VehicleDetailPagingScreen */,
+				BF285FF62984949C00363547 /* VehicleDetailPage */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -281,6 +327,7 @@
 				BFDD8ECA29842D4900BAA3AF /* CarInfo.swift */,
 				BFDD8EAD2984158000BAA3AF /* CustomTextFieldStyle.swift */,
 				BF2C50F529845F910054E480 /* SizeStringValidator.swift */,
+				BF285FFE2984965000363547 /* EmissionsCalculator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -336,16 +383,6 @@
 				BFDD8ECD2984340800BAA3AF /* ListSorter.swift */,
 			);
 			path = ListSorter;
-			sourceTree = "<group>";
-		};
-		BFDD8EAF2984173700BAA3AF /* VehicleDetail */ = {
-			isa = PBXGroup;
-			children = (
-				BFDD8EB22984175800BAA3AF /* VehicleDetailViewController.swift */,
-				BFDD8EB4298417B700BAA3AF /* VehicleDetailViewModel.swift */,
-				BFDD8EB62984199900BAA3AF /* VehicleDetailView.swift */,
-			);
-			path = VehicleDetail;
 			sourceTree = "<group>";
 		};
 		BFDD8EB8298420A600BAA3AF /* CollectionViewCells */ = {
@@ -523,7 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFDD8EB32984175800BAA3AF /* VehicleDetailViewController.swift in Sources */,
+				BF2C510A298489F50054E480 /* VehicleDetailPagingViewModel.swift in Sources */,
 				BF2C50F229845C0A0054E480 /* Font+.swift in Sources */,
 				BFDD8E89298327C200BAA3AF /* API.swift in Sources */,
 				BFDD8EC72984292300BAA3AF /* DetailCell.swift in Sources */,
@@ -534,29 +571,35 @@
 				BFDD8EAC2984122800BAA3AF /* ListSorterOption.swift in Sources */,
 				BFDD8E822983277600BAA3AF /* Requestable.swift in Sources */,
 				BFDD8ED02984378200BAA3AF /* ErrorView.swift in Sources */,
-				BFDD8EB72984199900BAA3AF /* VehicleDetailView.swift in Sources */,
 				BFDD8EBF2984225A00BAA3AF /* UICollectionView+.swift in Sources */,
 				BFDD8E802983273700BAA3AF /* Networker.swift in Sources */,
 				BFDD8EC3298422E900BAA3AF /* Configurable.swift in Sources */,
 				BFDD8E86298327A600BAA3AF /* NetworkingError.swift in Sources */,
+				BF285FFD2984959700363547 /* VehicleDetailPageDataSourceItem.swift in Sources */,
 				BFDD8ECB29842D4900BAA3AF /* CarInfo.swift in Sources */,
 				BFDD8E8E2983368000BAA3AF /* Constants.swift in Sources */,
 				BFDD8EC1298422BC00BAA3AF /* DetailCellViewModel.swift in Sources */,
+				BF285FF8298494AF00363547 /* VehicleDetailPageViewController.swift in Sources */,
 				BFDD8E7D298325E800BAA3AF /* VehicleListView.swift in Sources */,
 				BF2C50DE29844BF40054E480 /* VehicleList.swift in Sources */,
 				BF2C50F429845C7C0054E480 /* Color+.swift in Sources */,
+				BF285FFF2984965000363547 /* EmissionsCalculator.swift in Sources */,
 				BF2C50F629845F910054E480 /* SizeStringValidator.swift in Sources */,
 				BFDD8E91298339A400BAA3AF /* VehicleFetcher.swift in Sources */,
+				BF285FEE29848CB100363547 /* VehicleDetailPagingView.swift in Sources */,
 				BF2C50EE298455930054E480 /* View+.swift in Sources */,
 				BFDD8E3E2983219600BAA3AF /* AppDelegate.swift in Sources */,
 				BF2C50FD2984755A0054E480 /* FontName.swift in Sources */,
+				BF285FFA298494FE00363547 /* VehicleDetailPageViewModelable.swift in Sources */,
 				BFDD8E9729833BB800BAA3AF /* VehicleListViewModel.swift in Sources */,
 				BFDD8E842983279200BAA3AF /* Request.swift in Sources */,
 				BF2C50FF2984756B0054E480 /* UIFont+.swift in Sources */,
 				BFDD8EAE2984158000BAA3AF /* CustomTextFieldStyle.swift in Sources */,
 				BFDD8ECE2984340800BAA3AF /* ListSorter.swift in Sources */,
 				BFDD8ED429843D6A00BAA3AF /* ScaledProgressView.swift in Sources */,
-				BFDD8EB5298417B700BAA3AF /* VehicleDetailViewModel.swift in Sources */,
+				BF2C5108298489540054E480 /* VehicleDetailPagingViewController.swift in Sources */,
+				BF285FF3298490CE00363547 /* VehicleEmissionsViewModel.swift in Sources */,
+				BFDD8EB5298417B700BAA3AF /* VehicleBasicInfoViewModel.swift in Sources */,
 				BF2C50E529844CDB0054E480 /* VehicleListRowViewModel.swift in Sources */,
 				BF2C50E229844C2F0054E480 /* VehicleListRowView.swift in Sources */,
 				BFDD8E402983219600BAA3AF /* SceneDelegate.swift in Sources */,
@@ -568,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2C50FB29846AFB0054E480 /* SizeStringValidatorTests.swift in Sources */,
+				BF28600329849D5700363547 /* EmissionsCalculatorTests.swift in Sources */,
 				BFDD8E552983219800BAA3AF /* RidesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
