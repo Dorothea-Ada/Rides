@@ -10,6 +10,8 @@ import Combine
 
 struct VehicleListSearch: View {
     
+    @State var sizeStringError: String?
+    
     @Binding var sizeString: String
     @Binding var sorterOption: ListSorterOption
     
@@ -23,6 +25,9 @@ struct VehicleListSearch: View {
                     .foregroundColor(.customGrayDark)
                 TextField("", text: $sizeString)
                     .textFieldStyle(MyTextFieldStyle())
+                    .onChange(of: sizeString) { _ in
+                        sizeStringError = SizeStringValidator.validateSizeString(sizeString)
+                    }
                 
                 Button {
                     onGetListOfRandomVehicles()
@@ -33,8 +38,18 @@ struct VehicleListSearch: View {
                             width: Constants.Design.textFieldHeight,
                             height: Constants.Design.textFieldHeight
                         )
-                        .foregroundColor(.customRed)
+                        .foregroundColor(sizeStringError == nil ? .customRed : .customGrayDarkest)
                 }
+                .disabled(sizeStringError != nil)
+            }
+            if let sizeStringError {
+                Text(sizeStringError)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.9)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .multilineTextAlignment(.trailing)
+                    .font(.regular18)
+                    .foregroundColor(.customRed)
             }
             HStack {
                 Text("Sorted by:")

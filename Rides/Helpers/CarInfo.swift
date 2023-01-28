@@ -12,4 +12,6 @@ enum CarInfo: String {
     case vin = "VIN"
     case carType = "Car Type"
     case color = "Color"
+    case kilometrage = "Kilometrage"
+    case emissions = "Emissions"
 }

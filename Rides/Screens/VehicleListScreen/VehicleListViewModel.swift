@@ -32,11 +32,15 @@ final class VehicleListViewModel: VehicleListViewModelable {
     }
     
     func getListOfRandomVehicles(sizeString: String, sortedBy sorterOption: ListSorterOption) {
+        guard let size = Int(sizeString) else {
+            fatalError("Impossible error - Size must be a valid size at this point.")
+        }
+        
         state.errorMessage = nil
         state.listOfVehicles = []
         state.isLoadingVehicles = true
         
-        vehicleFetcher.getListOfRandomVehicles(size: Int(sizeString) ?? 100)
+        vehicleFetcher.getListOfRandomVehicles(size: size)
             .receive(on: RunLoop.main)
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
